@@ -1,4 +1,4 @@
-#Ranpo - WRO Future Engineers 2024
+#Ranpo
 Ranpo (Palestine)
 School Name: Anabta Girls Secondary School
 #Team Members :
