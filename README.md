@@ -22,7 +22,7 @@ We're focusing on these key areas to build our autonomous car:
 - **Optimization for Stability:** Our goal is to create a consistently reliable car capable of navigating the various track layouts.
 - **Teamwork and Documentation:** Strong collaboration, communication, and a detailed engineering journal will be critical to our success.
 # Track Details :
-![https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQct2nu5m4JM1Z1QExbAiuTG85rCe4jqtPVjw&s]
+![image-removebg-preview (5)](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQct2nu5m4JM1Z1QExbAiuTG85rCe4jqtPVjw&s)
 
 ## Technical Specifications
 
