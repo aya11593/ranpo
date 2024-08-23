@@ -28,6 +28,6 @@ We're focusing on these key areas to build our autonomous car:
 
 ### Hardware
 
-| Component | Description | Image | Link 
-|---|---|---|---|
-| **RASPBERRY PI** | Provides processing power for complex deep learning models. | ![image-removebg-preview (5)](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNjdFTogzNWNns1mfd1fhjfLgDHLenUuARvw&s) | <https://bit.ly/3wKg5TG>
+| Component | Description | Image |
+|---|---|---|
+| **RASPBERRY PI** | Provides processing power for complex deep learning models. | ![image-removebg-preview (5)](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNjdFTogzNWNns1mfd1fhjfLgDHLenUuARvw&s) |
