@@ -36,3 +36,9 @@ We're focusing on these key areas to build our autonomous car:
  **2-3 Raspberry Pi Cameras** | Capture rich visual data used for object detection, lane tracking, and path planning. | ![image-removebg-preview (7)](https://github.com/MoeezAnwar/RoboKings/assets/116732848/bf8420fb-db4a-40f1-aea0-3e7068d7ce46) |
 | **RC Car Chassis** | The physical foundation for our self-driving elf car. | ![71GffrS4wsL _AC_SX679_-removebg-preview](https://funduinoshop.com/media/image/08/f8/74/YFROBOT-chassis-kit-mit-lenkachse-1_200x200@2x.jpg)|
 | **tcs 43725** | is a color sensor designed by Texas Instruments. It’s part of their TCS (Texas Color Sensor) series, which are used for detecting and measuring colors in various applications.  | ![71GffrS4wsL _AC_SX679_-removebg-preview](https://m.media-amazon.com/images/I/6169sOb8-VL._AC_UF1000,1000_QL80_.jpg)|
+
+### Software
+- **C++:** Forms the core of our development, allowing for efficient code and optimal performance.
+- **Python**: Provides a flexible environment for developing and testing machine learning models, data processing, rapid prototyping, and integration with various tools and libraries.
+
+Together, C++ and Python offer a powerful combination, leveraging the strengths of each language to build a robust and efficient autonomous driving system.
