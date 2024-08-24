@@ -33,8 +33,8 @@ We're focusing on these key areas to build our autonomous car:
 | **RASPBERRY PI** | Provides processing power for complex deep learning models. | ![image-removebg-preview (5)](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNjdFTogzNWNns1mfd1fhjfLgDHLenUuARvw&s) |
 | **ARDUINO UNO** | Open-source electronic prototyping platform enabling users to create interactive electronic objects. | ![image-removebg-preview (5)](https://upload.wikimedia.org/wikipedia/commons/3/38/Arduino_Uno_-_R3.jpg)|
 | **ULTRASONIC SENSOR** | An electronic instrument that uses ultrasonic sound waves (through air) to measure the distance of the target object and the reflected sound is converted into electrical signal.  | ![image-removebg-preview (6)](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUyegBfSW_W0U-_pU9VsVvKSC8r9o_HopU3g&s) |
- **2-3 Raspberry Pi Cameras** | Capture rich visual data used for object detection, lane tracking, and path planning. | ![image-removebg-preview (7)](https://github.com/MoeezAnwar/RoboKings/assets/116732848/bf8420fb-db4a-40f1-aea0-3e7068d7ce46) |
-| **RC Car Chassis** | The physical foundation for our self-driving elf car. | ![71GffrS4wsL _AC_SX679_-removebg-preview](https://funduinoshop.com/media/image/08/f8/74/YFROBOT-chassis-kit-mit-lenkachse-1_200x200@2x.jpg)|
+|**2-3 Raspberry Pi Cameras** | Capture rich visual data used for object detection, lane tracking, and path planning. | ![image-removebg-preview (7)](https://github.com/MoeezAnwar/RoboKings/assets/116732848/bf8420fb-db4a-40f1-aea0-3e7068d7ce46) |
+| **WRO future engineers set** | The physical foundation for our self-driving elf car. | ![71GffrS4wsL _AC_SX679_-removebg-preview](https://funduinoshop.com/media/image/08/f8/74/YFROBOT-chassis-kit-mit-lenkachse-1_200x200@2x.jpg)|
 | **tcs 43725** | is a color sensor designed by Texas Instruments. It’s part of their TCS (Texas Color Sensor) series, which are used for detecting and measuring colors in various applications.  | ![71GffrS4wsL _AC_SX679_-removebg-preview](https://m.media-amazon.com/images/I/6169sOb8-VL._AC_UF1000,1000_QL80_.jpg)|
 
 ### Software
