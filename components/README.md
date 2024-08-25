@@ -6,5 +6,6 @@
 |**raspberry pi camera module 3** | Capture rich visual data used for object detection, lane tracking, and path planning. | ![image-removebg-preview (7)](https://thepihut.com/cdn/shop/products/raspberry-pi-camera-module-3-raspberry-pi-sc0872-40039005159619_2048x.jpg?v=1673207975) |
 | **WRO future engineers set** | The physical foundation for our self-driving elf car. | ![71GffrS4wsL _AC_SX679_-removebg-preview](https://funduinoshop.com/media/image/08/f8/74/YFROBOT-chassis-kit-mit-lenkachse-1_200x200@2x.jpg)|
 | **tcs 43725** | is a color sensor designed by Texas Instruments. It’s part of their TCS (Texas Color Sensor) series, which are used for detecting and measuring colors in various applications.  | ![71GffrS4wsL _AC_SX679_-removebg-preview](https://m.media-amazon.com/images/I/6169sOb8-VL._AC_UF1000,1000_QL80_.jpg)|
-| **servo motor ** | a rotary actuator that allows for precise control of angular position.  | ![71GffrS4wsL _AC_SX679_-removebg-preview](https://m.media-amazon.com/images/I/41r5LS1lYHL._AC_UF350,350_QL80_.jpg )|
-
+| **servo motor** | a rotary actuator that allows for precise control of angular position.  | ![71GffrS4wsL _AC_SX679_-removebg-preview](https://m.media-amazon.com/images/I/41r5LS1lYHL._AC_UF350,350_QL80_.jpg )|
+| **dc motor** | electrical motor that uses direct current (DC) to produce mechanical force.  | ![71GffrS4wsL _AC_SX679_-removebg-preview](https://m.media-amazon.com/images/I/31j41t1Y27L._AC_UF1000,1000_QL80_.jpg)|
+| **raspbot** |Raspbot is a smart car kit that can function as  an AI learning kit. | ![71GffrS4wsL _AC_SX679_-removebg-preview](http://www.yahboom.net/Public/images/newsimg/600f914608baa.jpg)|
