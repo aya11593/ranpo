@@ -48,7 +48,7 @@ Together, C++ and Python offer a powerful combination, leveraging the strengths 
 
 ## Content
 
-* the folder `t-photos` contains 2 funny photos of the team and an official one . 
+* the folder `t-photos` contains funny photos of the team and an official one . 
 * the folder `v-photos` contains 6 photos of the vehicle from every side.
 * the folder `schemes` contains a diagrams of the all the elements used in the vehicle and how they connect to each other.
 * the folder `src` contains code of control software for all components which were programmed to participate in the competition
