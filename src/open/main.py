@@ -1,60 +1,82 @@
-import RPi.GPIO as GPIO
+import serial
 import time
+
 import YB_Pcb_Car
 car=YB_Pcb_Car.YB_Pcb_Car()
-
-# Set GPIO mode
-GPIO.setmode(GPIO.BCM)
-
-# Define GPIO pins for HC-SR04
-
-
-# Set up GPIO pins
-
 car.Ctrl_Servo(3,90)
 
-def get_distance(TRIG:int,ECHO:int):
-    GPIO.setup(TRIG, GPIO.OUT)
-    GPIO.setup(ECHO, GPIO.IN)
-    # Send a pulse to the sensor
-    GPIO.output(TRIG, False)
-    time.sleep(.2)
-    GPIO.output(TRIG, True)
-    time.sleep(0.00001)
-    GPIO.output(TRIG, False)
+# Configure the serial port (replace 'COM3' with your port)
+ser = serial.Serial('/dev/ttyACM0', 115200, timeout=1)
+t=0
 
-    # Measure the duration of the pulse
-    while GPIO.input(ECHO) == 0:
-        pulse_start = time.time()
-    while GPIO.input(ECHO) == 1:
-        pulse_end = time.time()
 
-    # Calculate the distance
-    pulse_duration = pulse_end - pulse_start
-    distance = pulse_duration * 17150
-    distance = round(distance, 2)
+def read_ultrasonic_data():
+    t=0
+    while t<=12:
+        
+        if ser.in_waiting > 0:
+            line = ser.readline().decode('utf-8').strip()
+            try:
+                car.Car_Back(25,30)
+                car.Ctrl_Servo(3,90)
+                # Parse the distances
+                distances = line.split(',')
+                
+                if len(distances) == 2:
+                    
+                    distance2 = float(distances[0])
+                    print(distance2)
+                    color=distances[1]     
+                    print(color)
+                    
+                    
+                    # Check if the middle sensor reads less than 70 cm
+                    '''if distance1 <= 90:
+                        car.Ctrl_Servo(3,110)
+                        time.sleep(1)
+                        car.Ctrl_Servo(3,90)
+                        time.sleep(0.1)
+                        
+                    if distance2 <= 22:
+                        car.Ctrl_Servo(3,110)                                                        
+                        time.sleep(.4)
 
-    return distance
+                    if distance3 <=22:
+                        car.Ctrl_Servo(3,70)
+                        time.sleep(.4)'''
 
-try:
-    while True:
-        t=0
-       
-        car.Car_Back(70,70)
-        dist = get_distance(27,22)
-            #dist1 = get_distance(6,5)
-            #dist2 = get_distance(17,27)
+                    if color=="b":
+                        car.Ctrl_Servo(3,60)
+                        time.sleep(1)
+                        car.Ctrl_Servo(3,90)
+                        time.sleep(0.1)
+
+                    if color=="r" :
+                        t+=1
+                        print(t)
+                        car.Car_Back(70,70)
+                        car.Ctrl_Servo(3,120)
+                        time.sleep(1.5)
+
+                        car.Ctrl_Servo(3,90)
+                        time.sleep(1.6)
+                        
+                        
+                       
+
+
+
+
+                    if color=="w":
+                        car.Ctrl_Servo(3,90)
+
+                    car.Ctrl_Servo(3,90)
+                    time.sleep(0.1)
+
             
-        car.Ctrl_Servo(3,88)
-        if dist<=80 :
-            car.Ctrl_Servo(3,110)
-            time.sleep(1.3)
-            car.Ctrl_Servo(3,90)
-            time.sleep(0.1)
-            
-        else:
-            car.Ctrl_Servo(3,88)
-            time.sleep(0.1)
-        #if dist<25 or dist==0 or dist>=3000:
-            #car.Car_Run(100,100)
-           # time.sleep(0.5)
+            except ValueError:
+                print("Error parsing data")
+        time.sleep(0.1) # Sleep for a short time
+    car.Car_Stop()
+if _name_ == "_main_":
+    read_ultrasonic_data()
