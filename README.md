@@ -44,3 +44,12 @@ We're focusing on these key areas to build our autonomous car:
 - **Python**: Provides a flexible environment for developing and testing machine learning models, data processing, rapid prototyping, and integration with various tools and libraries.
 
 Together, C++ and Python offer a powerful combination, leveraging the strengths of each language to build a robust and efficient autonomous driving system.
+
+
+## Content
+
+* the folder `t-photos` contains 2 funny photos of the team and an official one . 
+* the folder `v-photos` contains 6 photos of the vehicle from every side.
+* the folder `schemes` contains a diagrams of the all the elements used in the vehicle and how they connect to each other.
+* the folder `src` contains code of control software for all components which were programmed to participate in the competition
+* the folder `components` contains photos of the components used in the vehicle.
