@@ -5,8 +5,6 @@ Ranpo (Palestine)
 ### Member Details :
 1. Aya Abu-Ammash 
 2. Saba Abu-Al-Own 
-3. Jana Abu-Al-Own 
-
 
 
 # Project Overview
