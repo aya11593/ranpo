@@ -4,11 +4,17 @@
 // Pin Definitions
 const int trigPin = 12;
 const int echoPin = 11;
+const int trigPin1 = 8;
+const int echoPin1 = 9;
+const int trigPinm = 4;
+const int echoPinm = 5;
 const int led = 13;
 
+#define commonAnode true
+
 // Variables
-long duration;
-int distance;
+long duration, duration1, durationm;
+int distance, distance1, distancem;
 byte gammatable[256];
 
 // Initialize TCS34725 sensor
@@ -16,10 +22,14 @@ Adafruit_TCS34725 tcs = Adafruit_TCS34725(TCS34725_INTEGRATIONTIME_50MS, TCS3472
 
 void setup() {
   Serial.begin(115200); // Faster baud rate for quicker serial communication
-
+  
   // Set pin modes
   pinMode(trigPin, OUTPUT);
   pinMode(echoPin, INPUT);
+  pinMode(trigPin1, OUTPUT);
+  pinMode(echoPin1, INPUT);
+  pinMode(trigPinm, OUTPUT);
+  pinMode(echoPinm, INPUT);
   pinMode(led, OUTPUT);
 
   // Initialize TCS34725 sensor
@@ -32,43 +42,44 @@ void setup() {
   for (int i = 0; i < 256; i++) {
     float x = i / 255.0;
     x = pow(x, 2.5) * 255;
-    gammatable[i] = x; // Simplified for non-commonAnode case
+    gammatable[i] = commonAnode ? 255 - x : x;
   }
 }
 
 void loop() {
   digitalWrite(led, HIGH); // Turn on LED for TCS34725
-  delay(10); // Shorter delay to speed up reading
+  delay(60); // Wait for sensor to stabilize
 
   float red, green, blue;
   tcs.setInterrupt(false); // Turn on LED for color reading
   tcs.getRGB(&red, &green, &blue);
   tcs.setInterrupt(true); // Turn off LED
 
-  // Process color data
-  int r = int(red);
-  int g = int(green);
-  int b = int(blue);
   String result;
-  
-  if (r<100) {
+  if (int(blue) > int(red)) {
     result = "b";
-  } else if (r > g && (r - g) <= 55) {
+  } else if (int(red) > int(green) && int(red) - int(green) <= 35) {
     result = "w";
   } else {
     result = "r";
   }
 
-  // Measure distance
+  // Measure distances
+  distancem = measureDistance(trigPinm, echoPinm);
   distance = measureDistance(trigPin, echoPin);
+  distance1 = measureDistance(trigPin1, echoPin1);
 
-  // Output results
+  // Print results to serial
+  Serial.print(distancem);
+  Serial.print(",");
   Serial.print(distance);
+  Serial.print(",");
+  Serial.print(distance1);
   Serial.print(",");
   Serial.println(result);
 
   // Short delay for loop stability
-  delay(100); // Adjust as needed for your application
+  delay(150); // Adjust as needed for your application
 }
 
 // Function to measure distance
