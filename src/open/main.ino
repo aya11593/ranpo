@@ -70,6 +70,7 @@ void loop() {
   distance1 = measureDistance(trigPin1, echoPin1);
 
   // Print results to serial
+  
   Serial.print(distancem);
   Serial.print(",");
   Serial.print(distance);
